@@ -1,3 +1,4 @@
+import 'package:commit/ui/web/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text("Commit"),
-        ),
-      ),
-    );
+        debugShowCheckedModeBanner: false, home: WebDashboard());
   }
 }
