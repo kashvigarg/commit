@@ -1,8 +1,8 @@
-import 'package:commit/constants/app_size.dart';
+import 'package:commit/state/models/challenge.dart';
+import 'package:commit/ui/common/in_progress.dart';
 import 'package:commit/ui/common/start_new_placeholder.dart';
 import 'package:commit/utils/track_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class WebDashboard extends StatelessWidget {
   const WebDashboard({super.key});
@@ -12,15 +12,25 @@ class WebDashboard extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          StartNewPlaceholder(track: Track.monthly),
-          StartNewPlaceholder(
-            track: Track.yearly,
-          ),
-          StartNewPlaceholder(
-            track: Track.custom,
-          )
+          InProgressWidget(challengeModel: _sample),
+          InProgressWidget(challengeModel: _sample),
+          InProgressWidget(challengeModel: _sample),
+          InProgressWidget(challengeModel: _sample),
+
+          // StartNewPlaceholderWidget(track: Track.monthly),
+          // StartNewPlaceholderWidget(
+          //   track: Track.yearly,
+          // ),
+          // StartNewPlaceholderWidget(
+          //   track: Track.custom,
+          // )
         ],
       ),
     );
   }
 }
+
+var startedOn = DateTime.now();
+var willEndOn = DateTime.now().add(const Duration(days: 100));
+ChallengeModel _sample = ChallengeModel('100 Days of Flutter', startedOn,
+    willEndOn, [], 0, 'A 100 Days of Flutter Challenge!', false, 100);

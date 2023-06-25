@@ -3,8 +3,8 @@ import 'package:commit/constants/app_styles.dart';
 import 'package:commit/utils/track_helper.dart';
 import 'package:flutter/material.dart';
 
-class StartNewPlaceholder extends StatelessWidget {
-  const StartNewPlaceholder({super.key, required this.track});
+class StartNewPlaceholderWidget extends StatelessWidget {
+  const StartNewPlaceholderWidget({super.key, required this.track});
 
   final Track track;
   @override
