@@ -26,7 +26,7 @@ class InProgressWidget extends StatelessWidget {
                     width: AppSize(context: context).width * 0.4,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        border: Border.all(),
+                        border: Border.all(width: 0.5),
                         color: AppColors.pastelColors[
                             Random().nextInt(AppColors.totalColors)]),
                   ),

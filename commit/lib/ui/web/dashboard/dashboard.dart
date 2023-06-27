@@ -1,7 +1,8 @@
 import 'package:commit/state/models/challenge.dart';
+import 'package:commit/ui/common/google_signin.dart';
 import 'package:commit/ui/common/in_progress.dart';
 import 'package:commit/ui/common/start_new_placeholder.dart';
-import 'package:commit/utils/track_helper.dart';
+import 'package:commit/utils/track_enum.dart';
 import 'package:flutter/material.dart';
 
 class WebDashboard extends StatelessWidget {
@@ -15,6 +16,7 @@ class WebDashboard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              GoogleSignIn(),
               InProgressWidget(challengeModel: _sample),
               InProgressWidget(challengeModel: _sample),
               InProgressWidget(challengeModel: _sample),
