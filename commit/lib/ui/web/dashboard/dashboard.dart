@@ -10,21 +10,25 @@ class WebDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          InProgressWidget(challengeModel: _sample),
-          InProgressWidget(challengeModel: _sample),
-          InProgressWidget(challengeModel: _sample),
-          InProgressWidget(challengeModel: _sample),
-
-          // StartNewPlaceholderWidget(track: Track.monthly),
-          // StartNewPlaceholderWidget(
-          //   track: Track.yearly,
-          // ),
-          // StartNewPlaceholderWidget(
-          //   track: Track.custom,
-          // )
-        ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InProgressWidget(challengeModel: _sample),
+              InProgressWidget(challengeModel: _sample),
+              InProgressWidget(challengeModel: _sample),
+              InProgressWidget(challengeModel: _sample),
+              StartNewPlaceholderWidget(track: Track.monthly),
+              StartNewPlaceholderWidget(
+                track: Track.yearly,
+              ),
+              StartNewPlaceholderWidget(
+                track: Track.custom,
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

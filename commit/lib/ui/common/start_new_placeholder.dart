@@ -12,12 +12,13 @@ class StartNewPlaceholderWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        // decoration: const BoxDecoration(
-        //     image: DecorationImage(
-        //         opacity: 0.78,
-        //         image: AssetImage('assets/images/geometric.jpg'),
-        //         fit: BoxFit.fitHeight)),
-        color: Colors.red,
+        height: AppSize(context: context).height * 0.15,
+        width: AppSize(context: context).width * 0.5,
+        decoration: BoxDecoration(
+          border: Border.all(width: 0.5),
+          borderRadius: BorderRadius.circular(15),
+          image: track.asset,
+        ),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -25,13 +26,14 @@ class StartNewPlaceholderWidget extends StatelessWidget {
               children: [
                 Text(
                   track.title,
+                  softWrap: true,
                   style: AppStyles.placeholderTextStyle,
                   textAlign: TextAlign.center,
                 ),
                 AppSize(context: context).verticalGap(),
                 const Icon(
                   Icons.add_circle,
-                  color: Colors.white60,
+                  color: Colors.black,
                 )
               ],
             ),
